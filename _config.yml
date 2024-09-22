@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Mi página de Ethical Hacking # the website title (if blank, full name will be used instead)
+title: Mis apuntes de Ethical Hacking # the website title (if blank, full name will be used instead)
 first_name: You
 middle_name: R.
 last_name: Name
@@ -133,7 +133,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
+blog_name: sefamol # blog_name will be displayed in your blog page
 blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
