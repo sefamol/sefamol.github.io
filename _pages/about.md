@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: sobre_mi
 permalink: /
 subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
 
@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-"¡Hola! Soy sefa, informático enfocado en seguridad informática y estudiante de fotografía. Desde hace mucho tiempo documento mis aprendizajes, me dedico a documentar los ctfs que estudio, mis aprendizajes en hacking web y ultimamente mi aproximación a assembler. Trabaje como consultor de seguridad informática y cuento con la certificación CEH practical. Cuando no estoy INVESTIGANDO, me encanta descubrir rincones escondidos en mi ciudad La Paz. Puedes seguirme en Twitter para más actualizaciones o contactarme para colaboraciones."
+"¡Hola! Soy sefa, informático enfocado en seguridad informática y aficionado del diseño gráfico y animaciones. Desde hace mucho tiempo documento mis aprendizajes y aca compartire el contenido de mis apuntes, compartire los ctfs que estudio, mis aprendizajes en hacking web y ultimamente mi aproximación a assembler. Trabaje como consultor de seguridad informática y cuento con la certificación CEH practical. Cuando no estoy INVESTIGANDO, me encanta descubrir rincones escondidos en mi ciudad La Paz. Puedes seguirme en Twitter para más actualizaciones o contactarme para colaboraciones."
 
 <!--Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
