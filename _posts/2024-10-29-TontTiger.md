@@ -48,7 +48,7 @@ En el caso de este ctf se obtuvo resultados de ínteres mediante el scaneo de pu
     nmap -Pn -sC -sV ip.
 </div>
 
-Ingresando por el puerto se reconoce que se utiliza la aplicación **JBoss** para el front-end.
+Ingresando por el puerto 8080 se reconoce que la aplicación **JBoss** se utiliza para el front-end.
 
 <div class="row mt-3 justify-content-center">
     <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
@@ -59,4 +59,132 @@ Ingresando por el puerto se reconoce que se utiliza la aplicación **JBoss** par
 </div>
 <div class="caption">
     Posible vulnerabilidad, aplicación JBoss para el front end.
+</div>
+
+## Primera Flag
+
+Además, se pudo identificar que existe una imagen en la web, la misma se encuentra almacenada en imgur y se puede observar que contiene un mensaje oculto utilizando la herramienta **strings**.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/tonyTT11.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/tonyTT12.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Imagen de la web y hallazgo del mensaje oculto.
+</div>
+
+## Segunda Flag
+
+Luego de obtener la primera flag, realizamos la explotación de la vulnerabilidad jboss reconocida anteriormente. Para ello descargamos el exploit desde github: https://github.com/joaomatosf/jexboss. fijamos la **ip atacante (nuestra ip)** y el **puerto** por el cual nos conectaremos.
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT01.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Ejecución del exploit.
+</div>
+
+Para mantener funcional el exploit utilizaremos **netcat** escuchando por el **puerto 4444**
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT02.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Ejecución del puerto en escucha.
+</div>
+
+### Hallando la flag del usuario jboss
+
+Una vez realizado la conexión con el servidor, es posible navegar en los ficheros del usuario cmnatic. Mediante una inspección simple de los ficheros se observo la carpeta **jboss**. utilizando el comando **ls -la** se puede observar el archivo .jboss.txt el mismo que es posible desplegar utilizando el comando cat.
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT03.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Visualización de la flag del usuario jboss.
+</div>
+
+### Escalamiento
+
+Además, en el mismo fichero encontramos el archivo note, que contiene información útil para el escalamiento
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT04.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Contenido del archivo note.
+</div>
+
+Posteriormente hacemos más amigable la terminal y logeamos con el usuario jboss
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT05.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Estabilización de la tty y acceso a la cuenta jboss.
+</div>
+
+### Obteniendo la flag de root
+
+Dentro la cuenta de jboss podemos intentar acceder a la carpeta root, a la cual no tenemos permiso para acceder. Explotando una vulnerabilidad de comandos en linux es posible acceder como usuario root. El payload se encuentra en https://gtfobins.github.io/gtfobins/find/#sudo Accediendo al fichero root, se puede observar el documento root.txt el cual contiene un mensaje en base64
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT06.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Escalamiento vertical a la cuenta del usuario root.
+</div>
+
+Utilizando ciberchef.org se pudo determinar el valor del mensaje, el cual es un hash que es posible determinar mediante uso de bibliotecas.
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT07.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Determinación del mensaje utilizando cyberchef.
+</div>
+
+Finalmente obtenemos el valor de la flag
+
+<div class="row mt-3 justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 mt-3 mt-md-0">
+        <div class="img-container">
+            {% include figure.liquid path="assets/img/tonyTT08.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        </div>
+    </div>
+</div>
+<div class="caption">
+    Obtención del valor de la flag de root.
 </div>
