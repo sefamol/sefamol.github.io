@@ -3,9 +3,9 @@
     "name": "Sebastian Montes",
     "label": "Ethical Hacker",
     "image": "",
-    "email": "sefamol@gmail.com",
+    "email": "sebastianfmontes@gmail.com",
     "phone": "(591) 70650805",
-    "url": "https://sefamol.github.io/al-folio/",
+    "url": "https://sefamol.github.io",
     "summary": "Informático, investigador de seguridad informática y freelancer nacido y residente actual en Bolivia.",
     "location": {
       //"address": "2712 Broadway St",
@@ -16,9 +16,9 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
+        "network": "Github",
         "username": "sefamol",
-        "url": "https://twitter.com/sefamol"
+        "url": "https://github.com/sefamol"
       }
     ]
   },
@@ -46,11 +46,21 @@
     {
       "organization": "Wikimedia Bolivia",
       "location": "La Paz - Bolivia",
-      "position": "Administración de datos",
+      "position": "Administración de imágenes",
       "url": "https://commons.wikimedia.org",
       "startDate": "2024-08-01",
       //"endDate": "2015-07-01",
       "summary": "Administración de imagenes y datos del capítulo boliviano de wikimedia",
+      "highlights": ["Administración de datos"]
+    },
+    {
+      "organization": "Wikidata Bolivia",
+      "location": "La Paz - Bolivia",
+      "position": "Manejo y curación de datos",
+      "url": "https://commons.wikidata.org",
+      "startDate": "2024-08-01",
+      //"endDate": "2015-07-01",
+      "summary": "Carga y verificación de datos sobre Bolivia",
       "highlights": ["Administración de datos"]
     }
   ],
@@ -132,7 +142,6 @@
   "skills": [
     {
       "name": "Hacking",
-      "level": "Junior",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "Pentesting Web",

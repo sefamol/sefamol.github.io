@@ -9,7 +9,7 @@ profile:
   image: perfil.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <center>sefamol@gmail.com</center>
+    <center>sebastianfmontes@gmail.com</center>
     <center>La Paz - Bolivia</center>
     <!-- <p>123 your address street</p>
     # <p>Your City, State 12345</p> !-->
