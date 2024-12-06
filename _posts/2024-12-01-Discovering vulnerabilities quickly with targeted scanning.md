@@ -17,7 +17,7 @@ featured: true
 - **CVSS 3.1**: AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  **7.5 Alto**
 
 ## **Reconocimiento**
-- al ser un laboratoprio inicial la vulnerabilidad se encuentra expuesta. Para ello capturamos el tráfico de la página en **product/stock**. Hacemos **click derecho** y activamos **active scan** y esperamos un poco de tiempo esperando que finalice el scaneo
+- Al ser un laboratorio inicial la vulnerabilidad se encuentra expuesta. Para iniciar la resolución, capturamos el tráfico de la página en **product/stock**. Hacemos **click derecho** y activamos **active scan** y esperamos un poco de tiempo esperando que finalice el scaneo
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -25,7 +25,7 @@ featured: true
     </div>
 </div>
 
-La vulnerabilidad detectada es **out-of-band resource load (HTTP)** la cual es catalogada con severidad alta por la herramienta.
+La vulnerabilidad detectada es **out-of-band resource load (HTTP)** la cual es catalogada con severidad alta.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
