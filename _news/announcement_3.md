@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Que es Wikidata y para que sirve?! :sparkles: :smile:
+Toca estudiar para Wikidata! :sparkles: :smile:

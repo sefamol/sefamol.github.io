@@ -6,7 +6,7 @@ description: Configuración de ACLs extendidos
 tags: SOC, Packet Tracer, Configuración redes, ciberseguridad, Network Defense
 categories: Seguridad Informática
 thumbnail: assets/img/logo-cisco.svg
-featured: true
+featured: false
 ---
 
 # **Datos Generales**
