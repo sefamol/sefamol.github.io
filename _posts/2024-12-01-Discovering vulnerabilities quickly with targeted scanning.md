@@ -6,7 +6,7 @@ description: Laboratorio introductorio a la herramienta Burpsuite
 tags: Burpsuite, Portswigger, pentesting, ciberseguridad, Web
 categories: Seguridad Informática
 thumbnail: assets/img/burp-logo.png
-featured: true
+featured: false
 ---
 
 # **Datos Generales**
