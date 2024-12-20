@@ -6,7 +6,7 @@ description: Configuración de ACLs en ipv6
 tags: SOC, Packet Tracer, Configuración redes, ciberseguridad, Network Defense, ipv6
 categories: Seguridad Informática
 thumbnail: assets/img/logo-cisco.svg
-featured: true
+featured: false
 ---
 
 # **Datos Generales**
