@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Se vienen cositas con Sparkql :sparkles: :smile:
+Vamos terminando los desafios deAdvent of Cyber 2024 :smile:

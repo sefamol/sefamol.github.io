@@ -6,7 +6,7 @@ description: Tutorial para la eliminación de ruido en las imagenes de Wikimedia
 tags: wikimedia, photoshop, edicion, imagenes 
 categories: wikimedia
 thumbnail: assets/img/9.jpg
-featured: true
+featured: false
 ---
 
 Existen procesos necesarios para que las imágenes añadidas a Wikimedia sean consideradas en el concurso Wikimedia Commons a nivel mundial. Uno de ellos es la eliminación de ruido, que reduce la granulación de la imagen en su máxima resolución, mejorando su calidad.
