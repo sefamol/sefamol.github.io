@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Vamos terminando los desafios deAdvent of Cyber 2024 :smile:
+Vamos terminando los desafios de Advent of Cyber 2024 :smile:

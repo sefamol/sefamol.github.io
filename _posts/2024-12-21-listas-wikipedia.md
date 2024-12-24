@@ -6,7 +6,7 @@ description: Tutorial para la creación de listas en wikipedia
 tags: wikipedia, listas, edicion 
 categories: wikipedia
 thumbnail: assets/img/wikipedia.png
-featured: true
+featured: false
 ---
 
 # **Datos Generales**
