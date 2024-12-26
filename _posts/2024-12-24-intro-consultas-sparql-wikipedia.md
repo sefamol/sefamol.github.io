@@ -19,27 +19,27 @@ featured: true
 
 # **Un poco de teoría**
 ## **Que es sparql?** 
-En términos simples es un lenguaje para la consulta de base de datos. Con lun par de particularidades.
-- Primero, esta más cerca de ser un lenguaje de base de datos no relacional (NoSQL) aunque maneja una sintaxis parecida a SQL
+En términos simples, es un lenguaje para la consulta de base de datos. Con algunas particularidades.
+- Primero, esta más cerca de ser un lenguaje de base de datos no relacional (NoSQL) aunque maneja una sintaxis parecida a SQL.
 - Segundo, Este lenguaje esta pensado para hacer consultas en la web semántica.
 - Tercero, lo usa Wikipedia para las consultas de su data.
 
-Más teoría en: https://datascience.recursos.uoc.edu/es/sparql/ y https://es.wikipedia.org/wiki/SPARQL
+Más teoría en: [https://datascience.recursos.uoc.edu/es/sparql/](https://datascience.recursos.uoc.edu/es/sparql/) y [https://es.wikipedia.org/wiki/SPARQL](https://es.wikipedia.org/wiki/SPARQL)
 
 ## **Que es una consulta?**
-De forma muy pero muy básica, una consulta es una petición de algo a un catálogo existente. Por ejemplo si entramos a una tienda **consultamos** si tiene "x" producto la persona que atiende nos responderá sobre la existencia del mismo. Lo mismo sucede con las bases de datos, con la diferencia de que se manejan grandes cantidades de datos y dependiendo los permisos se puede realizar diferentes actividades en las **tablas** existentes en la base de datos.
+De forma muy pero muy básica, una consulta es una petición de algo a un catálogo existente. Por ejemplo si entramos a una tienda **consultamos** si existe "x" producto, la persona que atiende nos responderá sobre la existencia del mismo. Lo mismo sucede con las bases de datos, con la diferencia de que se manejan grandes cantidades de datos y, dependiendo los permisos, es posible realizar diferentes actividades en las **tablas** existentes en la base de datos.
 
-Más teoría en https://www.hostinger.es/tutoriales/que-es-consulta-base-de-datos/
+Más teoría en [https://www.hostinger.es/tutoriales/que-es-consulta-base-de-datos/](https://www.hostinger.es/tutoriales/que-es-consulta-base-de-datos/)
 
 ## **Como hago una consulta en sparql?**
-La sintaxis utilizada en sparql esta determinada en la manipulación de grafos RDF en la web. Esta se se basa en tripletas que definen un universo que contiene **entidades** y **propiedades**. Las tripletas se componen de elementos que siguen el patrón: **sujeto - predicado - objeto**. En este sentido la consulta requiere de dos elementos importantes: las **propiedades** y las **entidades**.
+La sintaxis utilizada en SPARQL está diseñada para la manipulación y consulta de grafos RDF (Resource Description Framework) en la web. Se basa en tripletas que representan una estructura de datos formada por entidades, propiedades, y sus relaciones. Estas tripletas siguen el patrón: sujeto - predicado - objeto. Para realizar una consulta en SPARQL, se necesitan dos elementos clave: las entidades, que representan los nodos del grafo, y las propiedades, que describen las relaciones entre esas entidades.
 
-Una mejor explicación, la podemos encontrar en: https://data.cervantesvirtual.com/noticia/tutorial-de-inicio-a-sparql 
+Una mejor explicación la podemos encontrar en: [https://data.cervantesvirtual.com/noticia/tutorial-de-inicio-a-sparql](https://data.cervantesvirtual.com/noticia/tutorial-de-inicio-a-sparql)
 
 # **Vamos a la práctica**
 ## Petscan
 Empecemos conociendo como ingresar y realizar nuestra  consulta.
-- 1. Ingresamos a https://petscan.wmcloud.org/
+- 1. Ingresamos a [https://petscan.wmcloud.org/](https://petscan.wmcloud.org/)
 - 2. Seleccionamos la pestaña **Other sources** -> **Sparql**
 
 <div class="row mt-3 justify-content-center">
@@ -50,7 +50,7 @@ Empecemos conociendo como ingresar y realizar nuestra  consulta.
     </div>
 </div>
 
-- 3. Realizamos nuestra consulta para conocer especies animales existentes en Bolivia
+- 3. Realizaremos una consulta para conocer especies animales endemicas de Bolivia.
 
 **Consulta utilizada**
 
@@ -66,7 +66,7 @@ WHERE {
 ORDER BY ?especieLabel
 ```
 
-Notemos los campos **wd** y **wdt** son las entidades y propiedades de las que hablamos en la teoría.
+Notemos que los campos **wd** y **wdt** son las entidades y propiedades de las que hablamos en la teoría.
 
 **wdt (Wikidata Truthy Statements)**
 
@@ -79,28 +79,27 @@ Notemos los campos **wd** y **wdt** son las entidades y propiedades de las que h
 - **wdt:P183:** Representa la propiedad **"país de distribución nativa"**.
 
 **Uso:**
-    
-    - Permite filtrar por elementos que tienen relaciones simples y directas. En este caso:
-        - `?especie wdt:P31 wd:Q16521`: Busca elementos donde el sujeto (`?especie`) sea una **instancia de especie** (`Q16521`).
-        - `?especie wdt:P183 wd:Q750`: Busca elementos donde el sujeto (`?especie`) tenga a **Bolivia** (`Q750`) como país de distribución nativa.
- 
+
+- Permite filtrar por elementos que tienen relaciones simples y directas. En este caso:
+    - **?especie wdt:P31 wd:Q16521**: Busca elementos donde el sujeto (`?especie`) sea una **instancia de especie** (`Q16521`).
+    - **?especie wdt:P183 wd:Q750**: Busca elementos donde el sujeto (`?especie`) tenga a **Bolivia** (`Q750`) como país de distribución nativa.
  ---
 
 **wd (Wikidata Entity)**
 
-    - `wd:` se refiere a las **entidades de Wikidata**. Estas entidades son identificadores únicos asignados a conceptos, personas, lugares, propiedades, etc., en Wikidata.
-    - Los identificadores tienen el formato `Q#####` para elementos o `P#####` para propiedades.
+- `wd:` se refiere a las **entidades de Wikidata**. Estas entidades son identificadores únicos asignados a conceptos, personas, lugares, propiedades, etc., en Wikidata.
+- Los identificadores tienen el formato `Q#####` para elementos o `P#####` para propiedades.
 
 **En el ejemplo se entiende de esta manera:**
     
-    - `wd:Q16521`: Representa el concepto de **especie**.
-    - `wd:Q750`: Representa el concepto de **Bolivia**.
+- `wd:Q16521`: Representa el concepto de **especie**.
+- `wd:Q750`: Representa el concepto de **Bolivia**.
 
 **Uso:**
     
-    - Se utiliza como valor de una propiedad en una declaración. En este caso:
-        - `wd:Q16521` es el valor de `wdt:P31` para especificar que algo es una especie.
-        - `wd:Q750` es el valor de `wdt:P183` para indicar que Bolivia es el país de distribución nativa.
+- Se utiliza como valor de una propiedad en una declaración. En este caso:
+    - `wd:Q16521` es el valor de `wdt:P31` para especificar que algo es una especie.
+    - `wd:Q750` es el valor de `wdt:P183` para indicar que Bolivia es el país de distribución nativa.
 
 ## **De donde se obtiene los valores "P" y "Q" para la consulta?**
 ### **Para el valor Q**
@@ -115,7 +114,7 @@ Notemos los campos **wd** y **wdt** son las entidades y propiedades de las que h
     </div>
 </div>
 
-## **Para el valor P**
+### **Para el valor P**
 La lista de propiedades podemos encontrarla en https://www.wikidata.org/wiki/Wikidata:List_of_properties
 En esta pagina ingresamos el **valor buscado**, oprimimos en **buscar** y obtenemos el resultado. En la imagen muestra el valor **P** de la propiedad endémico utilizado en nuestra búsqueda. 
 
@@ -139,7 +138,7 @@ El resultado será el siguiente:
 
 podemos observar que cada artículo cuenta con su valor **Q**
 
-## Hagamoslo sencillo
+## **Hagamoslo sencillo**
 
 Hasta aqui es un enredo que a pesar de que es intuitivo es complicado de construir y de hallar la información. Por ello recurri a chatgpt, aplicación que construye la consulta de manera automática. El prompt que utilice es el siguiente:
 
