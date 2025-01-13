@@ -95,6 +95,13 @@
       "icon": "fa-solid fa-hashtag"
     },
     {
+      "name": "Network Defense",
+      "date": "2025-11-01",
+      "issuer": "Cisco",
+      "url": "https://www.credly.com/badges/c3d60bee-b190-4eb6-aa83-cf6b5050926d",
+      "icon": "fa-solid fa-envelope"
+    },
+    {
       "name": "Cyber Threat Management",
       "date": "2024-13-08",
       "issuer": "Cisco",
@@ -111,8 +118,8 @@
     {
       "name": "Certified Ethical Hacker (Practical)",
       "date": "2024-01-06",
-      "issuer": "EC-Cuncil",
-      "url": "https://www.eccouncil.org/",
+      "issuer": "EC-Cuncil - Certificate Number ECC5289316047",
+      "url": "https://aspen.eccouncil.org/Verify",
       "icon": "fa-solid fa-location-dot"
     }
   ],
@@ -150,7 +157,8 @@
         "Pruebas externas",
         "Criptografia",
         "Administración de escenarios de seguridad",
-        "Ingeniería Social"
+        "Ingeniería Social",
+        "Seguridad de la Información"
       ]
     }
   ],
@@ -174,7 +182,8 @@
         "Active Directory",
         "Red Team",
         "Hacking Gadgets",
-        "Criptografía"
+        "Criptografía",
+        "Seguridad de la Información"
       ]
     }
   ]
