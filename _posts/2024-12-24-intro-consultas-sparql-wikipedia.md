@@ -6,7 +6,7 @@ description: Tutorial introductorio para hacer consultas sparql con petscan
 tags: wikipedia, wikidata, sparql, petscan, nosql, base de datos 
 categories: wikipedia
 thumbnail: assets/img/wikipedia.png
-featured: true
+featured: false
 ---
 
 # **Datos Generales**
@@ -18,7 +18,7 @@ featured: true
 ---
 
 # **Un poco de teoría**
-## **Que es sparql?** 
+## **Qué es sparql?** 
 En términos simples, es un lenguaje para la consulta de base de datos. Con algunas particularidades.
 - Primero, esta más cerca de ser un lenguaje de base de datos no relacional (NoSQL) aunque maneja una sintaxis parecida a SQL.
 - Segundo, Este lenguaje esta pensado para hacer consultas en la web semántica.
