@@ -6,7 +6,7 @@ description: CTF sencillo con escalamiento a nivel root
 tags: ctf pentesting msfvenom web_application_archive .war apache tomcat directory_transversal
 categories: Seguridad Informática
 thumbnail: assets/img/thompson.png
-featured: true
+featured: false
 ---
 
 # **Datos Generales**

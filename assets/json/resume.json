@@ -88,6 +88,13 @@
   ],*/
   "certificates": [
     {
+      "name": "Junior Cybersecurity Analyst Career Path Exam",
+      "date": "2025-18-02",
+      "issuer": "Cisco",
+      "url": "https://www.credly.com/badges/b181f5d9-9124-4f64-8275-8fc77560e5e9",
+      "icon": "fa-solid fa-hashtag"
+    },
+    {
       "name": "Endpoint Security",
       "date": "2024-30-08",
       "issuer": "Cisco",

@@ -3,7 +3,7 @@ layout: post
 title: Tony The Tiger - Java serialisation attack
 date: 2024-10-29 18:00:00
 description: CTF guiado que explota el la vulnerabilidad serialización de Java
-tags: ctf, pentesting, ciberseguridad, Java Web App, criptografía
+tags: ctf pentesting ciberseguridad Java Web App criptografía
 categories: Seguridad Informática
 thumbnail: assets/img/tony.png
 ---
