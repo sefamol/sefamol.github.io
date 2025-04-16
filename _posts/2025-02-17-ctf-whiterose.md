@@ -3,7 +3,7 @@ layout: post
 title: Whiterose
 date: 2025-02-17 17:00:00
 description: CTF sencillo con escalamiento a nivel root
-tags: ctf pentesting idor template injection revshell payload
+tags: ctf pentesting idor template injection revshell payload sudoedit
 categories: Seguridad Informática
 thumbnail: assets/img/whiterose_00.png
 featured: true
